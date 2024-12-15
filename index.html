@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์สนับสนุนการเลิกบุหรี่</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Chatbot area */
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+        }
+
+        .chatbot-header {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .question-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .question-item {
+            background-color: #f0f0f0;
+            margin: 10px 0;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .question-item:hover {
+            background-color: #d9f7d9;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e6f7ff;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+			<ul>
+				<li><a href="#home">หน้าแรก</a></li>
+				<li><a href="#info">ข้อมูล</a></li>
+				<li><a href="#resources">แหล่งข้อมูล</a></li>
+				<li><a href="#experts">ผู้เชี่ยวชาญ</a></li>
+				<li><a href="#community">ชุมชน</a></li>
+				<li><a href="#blog">บล็อก</a></li>
+			</ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <h1>ยินดีต้อนรับสู่เว็บไซต์สนับสนุนการเลิกบุหรี่</h1>
+            <p>ให้ข้อมูลที่เป็นประโยชน์ เครื่องมือ และการปรึกษาจากผู้เชี่ยวชาญเพื่อช่วยให้คุณเลิกบุหรี่ได้สำเร็จ</p>
+            <img src="images/quit-smoking.jpg" alt="Quit Smoking Image" class="home-image">
+            <div class="welcome-message">
+                <p>เลิกบุหรี่ เปลี่ยนชีวิตคุณ เริ่มต้นวันนี้!</p>
+            </div>
+        </section>
+
+        <!-- Quit Smoking Information -->
+        <section id="info">
+            <h2>ข้อมูลการเลิกบุหรี่</h2>
+            <div class="info-item">
+                <h3>ประโยชน์ของการเลิกบุหรี่</h3>
+                <ul>
+                    <li class="lang-info-benefits">
+                        <strong>การทำงานของหัวใจและปอดดีขึ้น</strong>
+                        <p>การเลิกบุหรี่จะลดภาระต่อหัวใจและหลอดเลือด ปรับปรุงการหมุนเวียนของเลือด ลดความดันโลหิต และลดความเสี่ยงของโรคหัวใจและหลอดเลือดสมอง</p>
+                    </li>
+                    <li class="lang-info-benefits">
+                        <strong>ลดความเสี่ยงของมะเร็ง</strong>
+                        <p>การสูบบุหรี่เป็นสาเหตุหลักของมะเร็งหลายชนิด การเลิกบุหรี่จะลดความเสี่ยงของมะเร็งปอด มะเร็งในช่องปาก มะเร็งลำคอ และมะเร็งที่เกี่ยวข้องกับการสูบบุหรี่</p>
+                    </li>
+                    <li class="lang-info-benefits">
+                        <strong>สภาพผิวดีขึ้น</strong>
+                        <p>การสูบบุหรี่เร่งการเกิดริ้วรอยและทำให้ผิวหมองคล้ำ หลังจากการเลิกบุหรี่ผิวสามารถฟื้นฟูและดีขึ้นได้</p>
+                    </li>
+                    <li class="lang-info-benefits">
+                        <strong>ประหยัดเงิน</strong>
+                        <p>การสูบบุหรี่เป็นนิสัยที่มีค่าใช้จ่ายสูง เมื่อเลิกบุหรี่คุณจะประหยัดเงินได้อย่างมากในแต่ละปีซึ่งสามารถใช้ในกิจกรรมที่ดีต่อสุขภาพอื่น ๆ หรือกิจกรรมที่คุณชื่นชอบ</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>วิธีการเลิกบุหรี่</h3>
+                <p>มีวิธีการหลายอย่างในการเลิกบุหรี่ เลือกวิธีที่เหมาะสมที่สุดสำหรับคุณ วิธีที่พบบ่อย ได้แก่:</p>
+                <ul>
+                    <li>วิธีเลิกทันที: เลิกบุหรี่ทั้งหมดในทันที</li>
+                    <li>วิธีลดลงทีละน้อย: ค่อยๆ ลดจำนวนการสูบบุหรี่จนกว่าจะเลิกได้</li>
+                    <li>วิธีใช้ยาช่วย: ใช้ยาช่วยลดอาการขาดนิโคติน</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Resources Download -->
+        <section id="resources">
+            <h2>ดาวน์โหลดแหล่งข้อมูล</h2>
+            <ul>
+                <li><a href="resources/Quit-Smoking-Diary.pdf" download>เทมเพลตไดอารี่การเลิกบุหรี่</a></li>
+                <li><a href="resources/Quit-Smoking-Action-Plan.pdf" download>แผนการเลิกบุหรี่</a></li>
+                <li><a href="resources/Quit-Smoking-Brochure.pdf" download>แผ่นพับการเลิกบุหรี่</a></li>
+                <li><a href="resources/Success-Stories.pdf" download>เรื่องราวความสำเร็จ</a></li>
+            </ul>
+        </section>
+
+        <!-- Expert Consultation -->
+        <section id="experts">
+            <h2>ปรึกษาผู้เชี่ยวชาญ</h2>
+            <p>หากคุณมีคำถามใด ๆ กรุณากรอกแบบฟอร์มด้านล่างเพื่อปรึกษาผู้เชี่ยวชาญด้านการเลิกบุหรี่</p>
+            <form id="contact-form">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">ข้อความ:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="ส่ง">
+            </form>
+        </section>
+
+        <!-- Community Support -->
+        <section id="community">
+            <h2>การสนับสนุนจากชุมชน</h2>
+            <p>เข้าร่วมชุมชนการเลิกบุหรี่ของเราเพื่อแชร์ประสบการณ์และรับการสนับสนุนจากผู้ที่กำลังเลิกบุหรี่เช่นกัน</p>
+            <div class="forum">
+                <h3>การสนทนาล่าสุด</h3>
+                <ul>
+                    <li><a href="#">วิธีการเอาชนะความวิตกกังวลในระหว่างการเลิกบุหรี่</a></li>
+                    <li><a href="#">การเปลี่ยนแปลงทางจิตใจหลังจากการเลิกบุหรี่</a></li>
+                    <li><a href="#">วิธีที่ดีที่สุดในการเลิกบุหรี่สำเร็จ</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Latest Articles -->
+        <section id="blog">
+            <h2>บทความล่าสุด</h2>
+            <div class="blog-post">
+                <h3><a href="#">วิธีการเลิกบุหรี่สำเร็จ: คำแนะนำจากผู้เชี่ยวชาญ</a></h3>
+                <p>บทความนี้จะแชร์คำแนะนำจากผู้เชี่ยวชาญเพื่อช่วยให้คุณเลือกวิธีการเลิกบุหรี่ที่ดีที่สุดสำหรับคุณ...</p>
+            </div>
+
+            <div class="blog-post">
+                <h3><a href="#">อุปสรรคทั่วไปในระหว่างการเลิกบุหรี่</a></h3>
+                <p>หลายคนต้องเผชิญกับอุปสรรคในระหว่างการเลิกบุหรี่ บทความนี้จะแนะนำวิธีการรับมือกับความยากลำบากเหล่านั้น...</p>
+            </div>
+        </section>
+
+        <!-- Chatbot -->
+        <div class="chatbot">
+            <div class="chatbot-header">แชทบอทการเลิกบุหรี่</div>
+            <ul class="question-list">
+                <li class="question-item" onclick="showAnswer(1)">การเลิกบุหรี่ช่วยอะไรบ้าง?</li>
+                <li class="question-item" onclick="showAnswer(2)">ฉันจะเริ่มเลิกบุหรี่ได้อย่างไร?</li>
+                <li class="question-item" onclick="showAnswer(3)">บุหรี่ไฟฟ้าดีไหม?</li>
+                <li class="question-item" onclick="showAnswer(4)">ปัญหาที่พบบ่อยในการเลิกบุหรี่คืออะไร?</li>
+                <li class="question-item" onclick="showAnswer(5)">วิธีที่ดีที่สุดในการเลิกบุหรี่คืออะไร?</li>
+                <li class="question-item" onclick="showAnswer(6)">ฉันสามารถขอความช่วยเหลือได้ที่ไหน?</li>
+                <li class="question-item" onclick="showAnswer(7)">สุขภาพจะดีขึ้นแค่ไหนหลังการเลิกบุหรี่?</li>
+                <li class="question-item" onclick="showAnswer(8)">ฉันจะรักษาความมุ่งมั่นในการเลิกบุหรี่ได้อย่างไร?</li>
+            </ul>
+
+            <div class="answer-box" id="answer-1">
+                <p>การเลิกบุหรี่มีประโยชน์มากมายรวมถึงการปรับปรุงสุขภาพหัวใจ ปอด และลดความเสี่ยงจากมะเร็ง</p>
+            </div>
+            <div class="answer-box" id="answer-2">
+                <p>คุณสามารถเริ่มต้นได้โดยการตั้งเป้าหมายและเลือกวิธีการเลิกบุหรี่ที่เหมาะสมสำหรับคุณ</p>
+            </div>
+            <div class="answer-box" id="answer-3">
+                <p>แม้ว่าบุหรี่ไฟฟ้าจะมีอันตรายน้อยกว่า แต่ยังคงมีนิโคตินและอาจส่งผลต่อหัวใจและปอดได้</p>
+            </div>
+            <div class="answer-box" id="answer-4">
+                <p>ปัญหาทั่วไปในการเลิกบุหรี่รวมถึงอาการขาดนิโคตินและความเปลี่ยนแปลงทางอารมณ์ แต่มันสามารถเอาชนะได้ด้วยกลยุทธ์ที่เหมาะสม</p>
+            </div>
+            <div class="answer-box" id="answer-5">
+                <p>มีหลายวิธีในการเลิกบุหรี่ เลือกวิธีที่เหมาะสมที่สุดสำหรับคุณ คุณสามารถขอคำแนะนำจากแพทย์หรือกลุ่มสนับสนุนได้</p>
+            </div>
+            <div class="answer-box" id="answer-6">
+                <p>คุณสามารถหาความช่วยเหลือได้จากการค้นหาทางออนไลน์หรือการติดต่อองค์กรมืออาชีพ</p>
+            </div>
+            <div class="answer-box" id="answer-7">
+                <p>หลังจากเลิกบุหรี่แล้ว สุขภาพจะดีขึ้นอย่างมาก เช่น การหายใจที่ง่ายขึ้นและสุขภาพหัวใจและปอดที่ดีขึ้น</p>
+            </div>
+            <div class="answer-box" id="answer-8">
+                <p>การรักษาความมุ่งมั่นต้องมีการตั้งเป้าหมาย ติดตามความคืบหน้า และได้รับการสนับสนุนจากผู้อื่น</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 เว็บไซต์สนับสนุนการเลิกบุหรี่ สงวนลิขสิทธิ์</p>
+    </footer>
+    
+    <script>
+        // แสดงคำตอบเมื่อคลิกที่คำถาม
+        function showAnswer(id) {
+            const answerBoxes = document.querySelectorAll('.answer-box');
+            answerBoxes.forEach(box => {
+                box.style.display = 'none';
+            });
+            document.getElementById('answer-' + id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
